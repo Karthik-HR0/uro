@@ -3,14 +3,9 @@ package main
 import (
     "flag"
     "fmt"
-    "net/url"
     "os"
-    "strings"
-    "bufio"
-    "log"
 )
 
-// Main function
 func main() {
     // Display logo
     displayLogo()
@@ -44,7 +39,7 @@ func main() {
         os.Exit(1)
     }
 
-    // Call URL processing function
+    // Call your URL processing function here (replace with actual function)
     processURLs(*inputFile, *outputFile)
 }
 
@@ -57,61 +52,12 @@ func displayLogo() {
 ██║   ██║██╔══██╗████╔╝██║
 ╚██████╔╝██║  ██║╚██████╔╝
  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝
-URL CLEANER TOOL
 `
-    fmt.Fprint(os.Stdout, logo)  // Output the logo to the console
-    os.Stdout.Sync()  // Ensure the logo is flushed to the output
+    fmt.Println(logo)
 }
 
-// Function to process URLs from input file and write cleaned URLs to output file
+// Placeholder for URL processing logic
 func processURLs(input, output string) {
-    inFile, err := os.Open(input)
-    if err != nil {
-        log.Fatalf("Error opening input file: %v", err)
-    }
-    defer inFile.Close()
-
-    outFile, err := os.Create(output)
-    if err != nil {
-        log.Fatalf("Error creating output file: %v", err)
-    }
-    defer outFile.Close()
-
-    scanner := bufio.NewScanner(inFile)
-    writer := bufio.NewWriter(outFile)
-    defer writer.Flush()
-
-    for scanner.Scan() {
-        rawURL := scanner.Text()
-        cleanedURL, err := cleanURL(rawURL)
-        if err != nil {
-            log.Printf("Skipping invalid URL: %s\n", rawURL)
-            continue
-        }
-        writer.WriteString(cleanedURL + "\n")
-    }
-
-    if err := scanner.Err(); err != nil {
-        log.Fatalf("Error reading input file: %v", err)
-    }
-
-    fmt.Printf("URLs processed from %s and saved to %s\n", input, output)
-}
-
-// Function to clean and normalize a URL
-func cleanURL(rawURL string) (string, error) {
-    u, err := url.Parse(rawURL)
-    if err != nil {
-        return "", err
-    }
-
-    // Normalize scheme and host to lowercase
-    u.Scheme = strings.ToLower(u.Scheme)
-    u.Host = strings.ToLower(u.Host)
-
-    // Remove fragments (if any)
-    u.Fragment = ""
-
-    // Reconstruct the URL
-    return u.String(), nil
+    fmt.Printf("Processing URLs from %s and saving to %s...\n", input, output)
+    // Add your URL normalization logic here
 }
