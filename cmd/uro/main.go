@@ -7,10 +7,13 @@ import (
 )
 
 func main() {
+    // Display logo
+    displayLogo()
+
     // Define input and output flags
     inputFile := flag.String("i", "", "Input file containing URLs")
     outputFile := flag.String("o", "", "Output file for cleaned URLs")
-    
+
     // Define help flag
     help := flag.Bool("h", false, "Display help")
 
@@ -38,6 +41,19 @@ func main() {
 
     // Call your URL processing function here (replace with actual function)
     processURLs(*inputFile, *outputFile)
+}
+
+// Function to display logo
+func displayLogo() {
+    logo := `
+██╗   ██╗██████╗  ██████╗ 
+██║   ██║██╔══██╗██╔═████╗
+██║   ██║██████╔╝██║██╔██║
+██║   ██║██╔══██╗████╔╝██║
+╚██████╔╝██║  ██║╚██████╔╝
+ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝
+`
+    fmt.Println(logo)
 }
 
 // Placeholder for URL processing logic
