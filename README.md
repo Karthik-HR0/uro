@@ -1,6 +1,6 @@
 # uro (URL Processor)
 
-goro is a lightweight command-line tool written in Go for normalizing and processing URLs. It removes duplicates, sorts query parameters, and helps clean up URL data for tasks such as web scraping, API analysis, and debugging.
+uro is a lightweight command-line tool written in Go for normalizing and processing URLs. It removes duplicates, sorts query parameters, and helps clean up URL data for tasks such as web scraping, API analysis, and debugging.
 
 # Features
 ![68747470733a2f2f692e6962622e636f2f783274574343352f75726f2d64656d6f2e706e67](https://github.com/user-attachments/assets/dcecd8e8-5728-4671-ba4c-9f195856c9dd)
