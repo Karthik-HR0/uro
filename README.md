@@ -63,7 +63,7 @@ https://golang.org/dl/
 
 You can verify your Go installation by running:
 
-go version
+go version 
 
 # Project Structure
 
