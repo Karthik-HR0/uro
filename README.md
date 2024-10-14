@@ -17,7 +17,7 @@ Installation
 
 To install goro from the GitHub repository, make sure you have Go installed, and then run the following command:
 ```
-go install github.com/Karthik-HR0/goro/cmd/goro@latest
+go install github.com/Karthik-HR0/goro/cmd/uro@latest
 ```
 
 This command will install goro globally on your system as a command-line tool.
