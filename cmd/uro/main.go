@@ -53,7 +53,8 @@ func displayLogo() {
 ╚██████╔╝██║  ██║╚██████╔╝
  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝
 `
-    fmt.Println(logo)
+    fmt.Fprint(os.Stdout, logo)  // Use fmt.Fprint to force output to the console
+    os.Stdout.Sync()  // Ensure the logo is flushed to the output
 }
 
 // Placeholder for URL processing logic
