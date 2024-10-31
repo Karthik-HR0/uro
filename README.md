@@ -15,7 +15,7 @@ URO is a command-line tool that processes a list of URLs, extracts parameters, a
 ## Installation
 
 1. **Clone the repository**:
-   ```bash
+   ```
 go install github.com/Karthik-HR0/uro@latest
    ```
    ### Basic Usage
