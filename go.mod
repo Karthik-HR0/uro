@@ -1,4 +1,4 @@
-github.com/Karthik-HR0/uro
+module github.com/Karthik-HR0/uro
 
 go 1.19 // or your Go version
 
