@@ -27,7 +27,7 @@ cat urls.txt | uro
 ```
 $ ./uro -i urls.txt
 ╔══════════════════════════════════════════════╗
-║               URO v1.0.0 Started                     ║
+║               URO v1.0.0 Started             ║
 ╚══════════════════════════════════════════════╝
              Developed by Karthik-HR0          
 
