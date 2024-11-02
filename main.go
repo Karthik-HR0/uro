@@ -249,7 +249,7 @@ func main() {
                         }
                         queryStr += k + "=" + v
                     }
-                    fmt.Fprintln(writer, host+path+"?"+queryStr)
+                    fmt.Fprintln(writer, host+path+" "+queryStr)
                 }
             }
         }
